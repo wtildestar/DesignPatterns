@@ -12,6 +12,7 @@ class Teacher: Subject {
     
     // для добавления наблюдателей
     var observerCollection = NSMutableSet() // NSMutableSet для изменения коллекции в единственном экземпляре
+    
     var homeTask = "" {
         didSet {
             notify(withString: homeTask)
@@ -31,7 +32,6 @@ class Teacher: Subject {
             (observer as! PropertyObserver).didGet(newTask: string)
         }
     }
-    
     
 }
 
